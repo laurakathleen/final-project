@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: "welcome#home"
 
   get "/teams/:team_id", to: "teams#show", as: "team"
+  get "/teammates/:teammate_id", to: "teammates#show", as: "teammate"
+
 
 end
