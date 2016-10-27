@@ -1,1 +1,10 @@
 <%= @teammate.first_name %> <%= @teammate.last_name %>
+<ul><% @teammate.logs.each do |log| %>
+	<li><%= log.mileage %></li>
+<% end %>
+</ul>
+
+<%= link_to 'See mileage histroy', logs_path%>
+
+
+

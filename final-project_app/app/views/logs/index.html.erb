@@ -1,3 +1,11 @@
 This is where all of a teammate's logs will be displayed (by month)
 
+<ul><% @log.each do |log| %>
+	<li><%= log.date %><br>
+		<%= log.mileage %>
+	</li>
+<% end %>
+</ul>
 Same view as edit and delete will take place
+
+

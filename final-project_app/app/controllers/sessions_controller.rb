@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
 		teammate_params = params.require(:teammate).permit(:first_name, :last_name, :username, :password_digest, :team_id)
 		@teammate = Teammate.confirm(teammate_params)
 		if @teammate
-			login_url(@teammate)
-			redirect_to @teammate
+			login(@teammate)
+			redirect_to team_path(@teammate)
 		else
 			redirect_to login_path
 		end

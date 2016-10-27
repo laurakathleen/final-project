@@ -5,15 +5,14 @@ class LogsController < ApplicationController
 	end
 
 	def new
-		teammate_id = params[:teammate_id]
-		@teammate = Teammate.find_by_id(:teammate_id)
+		@teammate_id = getTeammateId
 		@log = Log.new
 	end
 
 	def create
+		@teammate_id = getTeammateId
 		@log = Log.create(log_params)
-		teammate_id = params[:teammate_id]
-		redirect_to teammate_path(:teammate_id)
+		redirect_to teammate_path
 	end
 
 	def show

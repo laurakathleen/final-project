@@ -12,4 +12,8 @@ module SessionsHelper
 	def logout
 		@current_teammate = session[:teammate_id] = nil
 	end
+
+	def getTeammateId
+    @@teammate_id
+  end
 end
