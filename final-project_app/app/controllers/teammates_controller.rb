@@ -19,7 +19,7 @@ class TeammatesController < ApplicationController
 	private
 
 	def teammate_params
-		params.require(:teammate).permit(:first_name, :last_name, :username, :password_digest, :team_id)
+		params.require(:teammate).permit(:first_name, :last_name, :username, :password, :team_id)
 	end
 end
   
