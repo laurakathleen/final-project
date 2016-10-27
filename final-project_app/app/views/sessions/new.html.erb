@@ -1,0 +1,7 @@
+Here is the form for logging in.
+
+<% form_for @teammate, url: "/sessions", method: "post" do |f| %>
+<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" <%= f.text_field :username %>>
+<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" <%= f.password_field :password %>>
+<button type="button" class="btn btn-default navbar-btn"><%= f.submit %>Sign in</button>
+<% end %>

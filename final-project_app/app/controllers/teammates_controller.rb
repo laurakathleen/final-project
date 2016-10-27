@@ -5,9 +5,9 @@ class TeammatesController < ApplicationController
 	end
 
 	def create
-		@teammate = Teammate.new(teammate_params)
+		@teammate = Teammate.create(teammate_params)
 		if @teammate.save
-			redirect_to teammate_path
+			redirect_to teammate_path(@teammate)
 		end 
 	end
 
@@ -19,7 +19,7 @@ class TeammatesController < ApplicationController
 	private
 
 	def teammate_params
-		params.require(:teammate).permit(:first_name, :last_name, :username, :password, :team_id)
+		params.require(:teammate).permit(:first_name, :last_name, :username, :password_digest, :team_id)
 	end
 end
   

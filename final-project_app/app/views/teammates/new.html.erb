@@ -1,1 +1,15 @@
 Sign up form for a new teammate goes in here!
+
+<%= form_for @teammate, url: "/teammates;/new", method: "post" do |f| %>
+<input type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon1" <%= f.text_field :first_name %>
+<input type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon1" <%= f.text_field :last_name %>
+<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" <%= f.text_field :username %>
+<input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" 
+	<%= f.password_field :password_digest %>
+<input type="text" class="form-control" placeholder="Team Id" aria-describedby="basic-addon1" <%= f.text_field :team_id %>
+<p>Choose a team</p>
+<p>or</p>
+<p>Create a new team</p>
+<button type="button"><%= f.submit "Sign Up", :class => "btn btn-default"%></button>
+<% end %>
+
