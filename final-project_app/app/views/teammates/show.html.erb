@@ -4,6 +4,17 @@
 <% end %>
 </ul>
 
+Add mileage
+
+<%= form_for :log, url_for => teammate_path(@teammate), :html => {:method => :post} do |f| %>
+<input type="text" class="form-control" placeholder="Date" aria-describedby="basic-addon1" <%= f.text_field :date %>
+<input type="number" class="form-control" placeholder="Mileage" aria-describedby="basic-addon1" <%= f.number_field :mileage %>
+<br>
+<button type="button"><%= f.submit "Add Mileage", :class => "btn btn-default"%></button>
+<% end %>
+
+<br>
+
 <%= link_to 'See mileage histroy', logs_path%>
 
 
