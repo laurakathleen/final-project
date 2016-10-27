@@ -6,4 +6,5 @@ Here's a team's profile page!
 	<%= teammate.first_name %>
 <% end %>
 
-<%= link_to "My Profile", team_path(@team.teammates) %>
+<%= link_to 'My profile', current_teammate[:teammate_id] %>
+<%= link_to 'My profile', @teammate %>
