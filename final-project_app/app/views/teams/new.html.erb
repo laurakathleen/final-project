@@ -1,1 +1,11 @@
 Create a new team!
+
+
+<%= form_for @team, url: {action: "create"} do |f| %>
+<input type="text" class="form-control" label="Team Name" placeholder="Pick a team name" aria-describedby="basic-addon1" <%= f.text_field :name %>
+<input type="text" class="form-control" label="Military Branch" placeholder="Branch of service" aria-describedby="basic-addon1" <%= f.text_field :branch %>
+<input type="text" class="form-control" label="Home base" placeholder="Home base" aria-describedby="basic-addon1" <%= f.text_field :start_location %>
+<input type="text" class="form-control" label="Deployment Location" placeholder="Deployment Location" aria-describedby="basic-addon1" <%= f.text_field :end_location %>
+<p>Auto generated :goal mileage</p>
+<button type="button"><%= f.submit "Create Team", :class => "btn btn-default"%></button>
+<% end %>
