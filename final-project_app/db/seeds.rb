@@ -11,9 +11,9 @@ Team.create(name:"Team3", branch:"Marine Corps", months:7, start_location: "Twen
 Team.create(name:"Team4", branch:"Marine Corps", months:7, start_location: "Twenty-Nine Palms", end_location: "Afghanistan", goal:7400)
 
 Teammate.create(first_name: "Laura", last_name: "Russell", username: "lrussell", password_digest: "password", team_id:1)
-Teammate.create(first_name: "Kevin", last_name: "Walley", username: "lrussell", password_digest: "password", team_id:2)
-Teammate.create(first_name: "Sarah", last_name: "Walley", username: "lrussell", password_digest: "password", team_id:3)
-Teammate.create(first_name: "Nick", last_name: "Walley", username: "lrussell", password_digest: "password", team_id:4)
+Teammate.create(first_name: "Kevin", last_name: "Walley", username: "krussell", password_digest: "password", team_id:2)
+Teammate.create(first_name: "Sarah", last_name: "Walley", username: "swalley", password_digest: "password", team_id:3)
+Teammate.create(first_name: "Nick", last_name: "Walley", username: "nwalley", password_digest: "password", team_id:4)
 
 Log.create(date: 2016-10-24, mileage: 5, teammate_id: 1)
 Log.create(date: 2016-10-24, mileage: 5, teammate_id: 2)

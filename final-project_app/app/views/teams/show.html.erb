@@ -1,8 +1,9 @@
-<%= link_to "Log Out", login_path %>
+<%= link_to 'Log Out', login_path %>
 <br>
 Here's your team's profile page!
 
-<h3><%= @team.name %></h3>
+<h3>Team Name: <%= @team.name %></h3>
+<h3>Team ID: <%= @team.id %></h3>
 <br>
 <% @team.teammates do |teammate| %>
 	<%= teammate.first_name %>

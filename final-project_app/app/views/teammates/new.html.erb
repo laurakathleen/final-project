@@ -6,8 +6,8 @@ Sign up form for a new teammate goes in here!
 <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" <%= f.text_field :username %>
 <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1" 
 	<%= f.password_field :password_digest %>
-<input type="text" class="form-control" placeholder="Team Id" aria-describedby="basic-addon1" <%= f.text_field :team_id %>
 <p>Choose an existing team</p>
+<%= f.collection_select :team_id, Team.order(:name), :id, :name %>
 <p>or</p>
 <%= link_to "Create a new team", new_team_path %>
 <button type="button"><%= f.submit "Sign Up", :class => "btn btn-default"%></button>
