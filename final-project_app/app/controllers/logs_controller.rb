@@ -38,6 +38,7 @@ class LogsController < ApplicationController
 	end
 
 	def destroy
+		@teammate = 
 		@log = Log.find(params[:log_id])
 		@log.destroy
 		redirect_to teammate_path(@teammate)
