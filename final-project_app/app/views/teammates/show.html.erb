@@ -1,3 +1,6 @@
+<%= link_to "Log Out", login_path %>
+<br>
+
 <%= @teammate.first_name %> <%= @teammate.last_name %>
 <ul><% @teammate.logs.each do |log| %>
 	<li><%= log.mileage %></li>

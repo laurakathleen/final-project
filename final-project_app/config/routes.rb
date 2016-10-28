@@ -2,15 +2,16 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'welcome#home'
 
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'sessions#new', as: 'login'
   post '/sessions', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
 
-
+  get '/teams/new', to: 'teams#new', as: 'new_team'
+  post '/teams/', to: 'teams#create'
   get '/teams/:team_id', to: 'teams#show', as: 'team'
 
-  get '/teams/:team_id/teammates/new', to: 'teammates#new', as: 'new_teammate'
-  post '/teams/:team_id/teammates', to: 'teammates#create'
+  get '/teammates/new', to: 'teammates#new', as: 'new_teammate'
+  post '/teammates', to: 'teammates#create'
   get '/teams/:team_id/teammates/:teammate_id', to: 'teammates#show', as: 'teammate'
 
   get '/teams/:team_id/teammates/:teammate_id/logs', to: 'logs#index', as: 'logs'
