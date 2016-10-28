@@ -10,7 +10,7 @@
 Add mileage
 
 <%= form_for :log, url_for => teammate_path, :html => {:method => :post} do |f| %>
-<input type="text" class="form-control" placeholder="Date" aria-describedby="basic-addon1" <%= f.text_field :date %>
+<%= select_date Date.today, :prefix => :date %>
 <input type="number" class="form-control" placeholder="Mileage" aria-describedby="basic-addon1" <%= f.number_field :mileage %>
 <%= f.hidden_field :teammate_id %>
 <br>
