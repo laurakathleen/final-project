@@ -6,10 +6,12 @@ This is where all of a teammate's logs will be displayed (by month)
 <ul><% @log.each do |log| %>
 	<li><%= log.date %><br>
 		<%= log.mileage %>
+		<%= button_to "Delete", logs_path, method: :delete %>
 	</li>
 <% end %>
 </ul>
 Same view as edit and delete will take place
+
 <br>
 <%= link_to 'My profile', teammate_path %>
 <br>
