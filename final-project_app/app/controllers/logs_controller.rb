@@ -10,7 +10,7 @@ class LogsController < ApplicationController
 	end
 
 	def create
-		teammate = Teammate.find_by_id(params[:id])
+		@teammate = Teammate.find_by_id(params[:id])
 		@log = Log.new(log_params)
 		@log.teammate_id = @log.id
 		if @log.save
